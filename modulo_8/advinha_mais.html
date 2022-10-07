@@ -1,0 +1,80 @@
+<meta charset="utf-8">
+
+<input/>
+<button> Compare com meu segredo </button>
+
+<script type="text/javascript">
+
+    function sorteia(){
+        return Math.round(Math.random() * 10)
+    }
+
+    function sorteiaNumeros(quantidadeDeSegredo){
+        var segredosFunction = [];
+        var numero = 1;
+
+        while (numero <= quantidadeDeSegredo){
+            var numeroAleatorio = sorteia();
+            if (numeroAleatorio !== 0){
+                var achou = false;
+
+                for (var posicao = 0; posicao < segredosFunction.length; posicao++){
+                    if(segredosFunction[posicao] == numeroAleatorio){
+                        achou = true;
+                        break;
+                    }
+                }
+
+                if (achou == false){
+                    segredosFunction.push(numeroAleatorio);
+                    numero++;
+                }
+            }  
+        }
+    }
+
+    function verifica(){
+
+        var achou = false;
+
+        for (var posicao = 0; posicao < segredos.length; posicao++){
+
+            if (input.value == segredos[posicao]){
+                alert("Você acertou!");
+                achou = true;
+                break;
+            }
+        }
+
+        if (achou == false){
+            alert("Você errou kkk!");
+        }
+
+        input.value ="";
+        input.focus(); /* Foca o cursor novamente no input, facilitando a experiência do usuário. */
+           
+        }
+
+    /*  
+        document.querySector("tag") pega as informações que estão sendo recebidas dentro de uma tag html.
+        input.value mostra os valores que estao sendo recebidos na tag input.
+        tag.onclick diz que quando clicarmos na tag indicada, alguma ação será feita.
+        tag.focus(); faz com que o foco volte para a tag indicada.
+        array.length nos da o tamanho do array. 
+    */
+
+    var segredos = [];
+    segredos.push(sorteiaNumeros());
+
+    var input = document.querySelector("input");
+    input.focus(); /*  Foca mais uma vez o cursor dentro do input quando recarregamos a página.  */
+
+    
+
+    var button = document.querySelector("button");
+    button.onclick = verifica;
+    
+
+
+    
+</script>

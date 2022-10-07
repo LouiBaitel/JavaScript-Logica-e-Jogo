@@ -1,0 +1,28 @@
+<meta charset="utf-8">
+
+<script type="text/javascript">
+
+	function pularLinha(){
+		document.write("<br>");
+	}
+
+	function mostra(frase){
+		document.write(frase);
+        pularLinha();
+	}
+
+    var escolha = parseInt(prompt("Escolha o número que deseja a tabuada: "));
+
+    /* O primeiro parâmetro do for vai ser a definição do iterador, o segundo é a condição do iterador, e o terceiro é o que sera implementado no iterador a cada repetição */
+    for(var multiplicador2 = 1; multiplicador2 <= 10; multiplicador2++){
+        mostra(escolha * multiplicador2);
+    }
+
+    var multiplicador = 1;
+    while(multiplicador <= 10){
+        mostra(escolha * multiplicador);
+        multiplicador += 1;
+    }
+
+
+</script>

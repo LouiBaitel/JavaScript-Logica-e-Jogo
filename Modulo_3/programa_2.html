@@ -1,0 +1,35 @@
+<meta charset="UTF-8">
+
+<script>
+
+	function pularLinha() {
+		document.write("<br>");
+	} 
+
+	function mostra(nome, ano, nascimento){
+		document.write(nome + " tem " + (ano - nascimento) + " anos. <br>");
+	}
+
+	document.write("Idades: <br>");
+	pularLinha()
+	var ano = 2022;
+	var nome1 = "Flávio";
+	var nascimento1 = 1977;
+	var nome2 = "Joaquim";
+	var nascimento2 = 1996;
+	var nome3 = "Barney";
+	var nascimento3 = 1976;
+
+	mostra(nome1, ano, nascimento1);
+	mostra(nome2, ano, nascimento2);
+	mostra(nome3, ano, nascimento3);
+	
+	// document.write("Flávio tem " + (ano - 1977) + " anos.<br>");
+	// document.write("Joaquim tem " + (ano - 1996) + " anos.<br>");	
+	// document.write("Barney tem " + (ano - 1976) + " anos.<br>");
+				   
+</script>
+
+
+
+

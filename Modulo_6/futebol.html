@@ -1,0 +1,28 @@
+<meta charset="utf-8">
+
+<script type="text/javascript">
+
+	function pularLinha(){
+		document.write("<br>");
+	}
+
+	function mostra(frase){
+		document.write(frase);
+        pularLinha();
+	}
+
+    /* parseInt() serve para transformar uma string em inteiro */   
+    var vitorias = parseInt(prompt("Digite o numero de vitórias: "));
+    var empates = parseInt(prompt("Digite o numero de empates: "));
+    var pontosAnopassado = parseInt(prompt("Digite o número de pontos do ano passado: "));
+    var pontos = (vitorias * 3) / empates;
+
+    if (pontos > pontosAnopassado){
+        mostra("Os pontos do seu time esse ano são " + pontos + ". Vocês estão melhor que ano passado!!");
+    } else if (pontos < pontosAnopassado){ 
+        mostra("Os pontos do seu time esse ano são " + pontos + ". Vocês estão pior que ano passado. :( ");
+    } else{
+        mostra("Os pontos do seu time esse ano são " + pontos + ". Vocês estão iguais ao ano passado! ");
+    }
+
+</script>

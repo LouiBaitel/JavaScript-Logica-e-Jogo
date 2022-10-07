@@ -1,0 +1,40 @@
+<meta charset="utf-8">
+
+<script type="text/javascript">
+
+	function pularLinha(){
+		document.write("<br>");
+	}
+
+	function calcula_imc(peso, altura){
+		var imc = (peso / (altura * altura));
+		return imc
+	}
+
+	function classifica_imc(imc, nome){
+		if (imc < 18.5) {
+			document.write("<br>" + nome + ", você está abaixo do peso normal.");
+		} else if (18.5 <= imc <= 24.9 ){
+			document.write("<br>" + nome + ", você está no peso normal.");
+		} else if (25.0 <= imc <= 29.9 ){
+			document.write("<br>" + nome + ", você está com excesso de peso.");
+		} else if (30.0 <= imc <= 34.9 ){
+			document.write("<br>" + nome + ", você está com obesidade classe I.");
+		} else if (35.0 <= imc <= 39.9 ){
+			document.write("<br>" + nome + ", você está com obesidade classe II.");
+		} else{
+			document.write("<br>" + nome + ", você está com obesidade classe III.");
+		}
+	}
+
+
+var nomeUsuario = prompt("Digite seu nome: ");
+var pesoUsuario = prompt("Digite seu peso em quilogramas: ");
+var alturaUsuario = prompt("Digite sua altura em metros (utilizar . ): ");
+
+imc = calcula_imc(pesoUsuario, alturaUsuario);
+document.write(nomeUsuario + " tem " + pesoUsuario + "kg e " + alturaUsuario + "m. <br> Seu IMC é: " + imc );
+classifica_imc(imc, nomeUsuario)
+
+
+</script>
